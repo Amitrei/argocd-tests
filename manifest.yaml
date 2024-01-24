@@ -1,20 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: AppProject
 metadata:
-  name: sample-app
+  name: sample-project
   namespace: argocd
 spec:
-  destination:
-    namespace: sample-app
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: sample-app
     server: https://kubernetes.default.svc
-  project: sample-project
-  source:
-    path: sample-app/
-    repoURL: https://github.com/amitrei/argocd-tests.git
-    targetRevision: HEAD
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
+  orphanedResources:
+    warn: false
+  sourceRepos:
+  - '*'
