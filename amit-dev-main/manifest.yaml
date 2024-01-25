@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: dotfile-secret
 data:
-  password: 1234
+  password: "1234"
 ---
 # Source: hello-world/templates/serviceaccount.yaml
 apiVersion: v1
