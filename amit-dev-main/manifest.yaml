@@ -6,6 +6,7 @@ type: Opaque
 data:
   API_KEY: bWVnYV9zZWNyZXRfa2V5
   API_SECRET: cmVhbGx5X3NlY3JldF92YWx1ZTE=---
+---
 # Source: hello-world/templates/serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
