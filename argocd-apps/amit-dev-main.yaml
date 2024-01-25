@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: argocd-amit
   source:
-    path: amit-dev-main/
+    path: amit-dev-main
     repoURL: https://github.com/amitrei/argocd-tests.git
     targetRevision: HEAD
   syncPolicy:
