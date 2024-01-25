@@ -1,11 +1,9 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: dummy-secret
-type: Opaque
+  name: dotfile-secret
 data:
-  API_KEY: bWVnYV9zZWNyZXRfa2V5
-  API_SECRET: cmVhbGx5X3NlY3JldF92YWx1ZTE=---
+  .secret-file: dmFsdWUtMg0KDQo=
 ---
 # Source: hello-world/templates/serviceaccount.yaml
 apiVersion: v1
